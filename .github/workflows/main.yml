@@ -78,7 +78,7 @@ jobs:
       - uses: azure/webapps-deploy@v2
         with:
           app-name: 'wthpwdevops-dev'
-          images: $registryName/$repositoryName:$tag
+          images: wthpwdevopsreg.azurecr.io/wth/dotnetcoreapp:${{github.run_number}}
 
   deploy-to-test:
   
@@ -99,7 +99,7 @@ jobs:
     - uses: azure/webapps-deploy@v2
       with:
         app-name: 'wthpwdevops-test'
-        images: $registryName/$repositoryName:$tag
+        images: wthpwdevopsreg.azurecr.io/wth/dotnetcoreapp:${{github.run_number}}
 
   deploy-to-prod:
   
@@ -120,4 +120,4 @@ jobs:
     - uses: azure/webapps-deploy@v2
       with:
         app-name: 'wthpwdevops-prod'
-        images: $registryName/$repositoryName:$tag
+        images: wthpwdevopsreg.azurecr.io/wth/dotnetcoreapp:${{github.run_number}}
