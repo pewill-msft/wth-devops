@@ -9,6 +9,7 @@ using RazorPagesTestSample.Data;
 namespace RazorPagesTestSample
 {
     // A test change
+    // A second test change
     public class Program
     {
         public static void Main(string[] args)
