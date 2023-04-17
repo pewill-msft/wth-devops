@@ -1,5 +1,8 @@
 on:
   workflow_dispatch  
+  
+env:
+  targetEnv: test
 
 name: Azure ARM
 jobs:
@@ -21,3 +24,4 @@ jobs:
         subscriptionId: ${{ secrets.AZURE_SUBSCRIPTION }}
         resourceGroupName: ${{ secrets.AZURE_RG }}
         template: ./container-webapp-template.json
+        parameters: webAppName=wthpwdevops-${{ env.targetEnv }}
